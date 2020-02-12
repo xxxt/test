@@ -2,7 +2,7 @@
 
 > 从Ubuntu 18.04（DGX OS 4.x）起，系统默认使用netplan进行网络管理
 
-####配置方法
+#### 配置方法
 **配置文件**   `/etc/netplan/*.yaml` (`如：/etc/netplan/config.yaml`)
 **解析配置并应用**    `sudo netplan apply`
 
