@@ -1,7 +1,10 @@
 [DGX-1硬件配置](dgx-1.md)
 
+[DGX-1 BMC配置使用](dgx-bmc.md)
+
 [netplan配置](netplan.md)
-### DGX BMC配置
+
+
 
 ### ipmitool工具
 

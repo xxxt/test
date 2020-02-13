@@ -1,6 +1,10 @@
 ## DGX-1硬件配置
 
 > DGX-1是指由NVIDIA公司设计和制造的计算设备
+
+[netplan网络配置](netplan.md)
+
+[BMC配置](dgx-bmc.md)
  
 #### 系统组件
 组件 | 数量 | 配置 | 
