@@ -1,11 +1,24 @@
-## DGX-1硬件配置
+## DGX-1配置指南
 
-> DGX-1是指由NVIDIA公司设计和制造的计算设备
+> 本文描述DGX-1是指由NVIDIA公司设计和制造的计算设备
 
+
+###### 相关阅读：
 [netplan网络配置](netplan.md)
 
 [BMC配置](dgx-bmc.md)
  
+[DGX-1重置GPU](dgx1-reset-gpu.md)
+
+[DGX配置NFS缓存](dgx1-nfs-cache.md)
+
+[使用ipmitool工具](ipmitool.md)
+
+[更改Mellanox卡端口类型](change_ib_type.md)
+
+[重新安装DGX OS](dgx1-os-reinstall.md)
+
+### DGX-1硬件配置
 #### 系统组件
 组件 | 数量 | 配置 | 
 ---|---|---

@@ -1,23 +1,21 @@
-[DGX-1硬件配置](dgx-1.md)
+[DGX-1配置指南](dgx-1.md)
 
 [DGX-1 BMC配置使用](dgx-bmc.md)
 
+[DGX-1重置GPU](dgx1-reset-gpu.md)
+
+[DGX配置NFS缓存](dgx1-nfs-cache.md)
+
 [netplan配置](netplan.md)
 
+[使用ipmitool工具](ipmitool.md)
 
+[更改Mellanox卡端口类型](change_ib_type.md)
 
-### ipmitool工具
+[重新安装DGX OS](dgx1-os-reinstall.md)
 
-### 重新引导DGX OS
-
-### IP over Infiniband 配置
-
-### Infiniband模式与以太网模式切换
 
 ### 持久化DGX-1的raid存储
 
-### DGX配置NFS缓存
 
 ### 在自定义系统上安装DGX健康检查工具NVSM
-
-### 故障排除
