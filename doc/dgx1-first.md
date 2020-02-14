@@ -16,3 +16,5 @@
 <hostname> login:
 Password:
 ```
+###### 相关阅读
+[DGX-1配置指南](dgx-1.md)

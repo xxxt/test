@@ -1,76 +1,29 @@
-from abc import ABCMeta, abstractmethod
-
-class Employee(object, metaclass=ABCMeta):
-    """员工"""
-
-    def __init__(self, name):
-        self._name = name
-
-    @property
-    def name(self):
-        return self._name
-    
-    @abstractmethod
-    def get_salary(self):
-        pass
-
-class Manager(Employee):
-    """部门经理"""
-
-    def get_salary(self):
-        return 15000.0
-
-class Programmer(Employee):
-    """程序员"""
-
-    def __init__(self, name, working_hour=0):
-        super().__init__(name)
-        self._working_hour = working_hour
-
-    @property
-    def working_hour(self):
-        return self._working_hour
-    
-    @working_hour.setter
-    def working_hour(self, working_hour):
-        self._working_hour = working_hour
-
-    def get_salary(self):
-        return 150 * self._working_hour
-
-class Salesman(Employee):
-    """销售员"""
-
-    def __init__(self, name, sales=0):
-        super().__init__(name)
-        self._salas = sales
-    
-    @property
-    def salas(self):
-        return self._salas
-    
-    @salas.setter
-    def salas(self, salas):
-        self._salas = salas
-    
-    def get_salary(self):
-        return 1200 + self._salas * 0.05
+import pygame
 
 
 def main():
-    emps = [
-        Manager('刘备'), Programmer('B'),
-        Manager('CV'), Salesman('D'),
-        Programmer('NN')
-    ]
+    # 初始化导入的pygame中的模块
+    pygame.init()
+    # 初始化用于显示的窗口并设置窗口尺寸
+    screen = pygame.display.set_mode((800, 600))
+    # 设置当前窗口的标题
+    pygame.display.set_caption('大球吃小球')
+    # 定义变量来表示小球在屏幕上的位置
+    x, y = 50, 50
+    running = True
+    # 开启一个事件循环处理发生的事件
+    while running:
+        # 从消息队列中获取事件并对事件进行处理
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        screen.fill((255, 255, 255))
+        pygame.draw.circle(screen, (255, 0, 0,), (x, y), 30, 0)
+        pygame.display.flip()
+        # 每隔50毫秒就改变小球的位置再刷新窗口
+        pygame.time.delay(50)
+        x, y = x + 5, y + 5
 
-    for emp in emps:
-        if isinstance(emp, Programmer):
-            emp.working_hour = int(input('请输入{}工作时长'.format(emp.name)))
-        elif isinstance(emp, Salesman):
-            emp.salas = float(input('请输入{}的销售额'.format(emp.name)))
-        print('{}本月工资为{}'.format(emp.name, emp.get_salary()))
-        
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
