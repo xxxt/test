@@ -4,7 +4,7 @@
 
 还原DGX-1软件映像的过程如下：
 
-1. 从NVIDIA Enterprise Support 获取包含映像的ISO文件。具体方法参考：[获取DGX软件镜像说明](https://docs.nvidia.com/dgx/dgx1-user-guide/maintenance.html#obtain-product-software-iso-image)
+1. 从NVIDIA Enterprise Support 获取包含映像的ISO文件。具体方法参考：[获取DGX软件镜像说明](get_dgxos.md)
 2. 通过BMC远程或从可引导USB闪存驱动器从此文件中还原DGX-1软件映像。
 
 #### 获取DGX-1软件ISO映像和校验和文件

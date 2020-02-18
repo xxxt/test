@@ -2,7 +2,6 @@
 
 > 本文描述DGX-1是指由NVIDIA公司设计和制造的计算设备
 
-
 ###### 相关阅读：
 [netplan网络配置](netplan.md)
 
