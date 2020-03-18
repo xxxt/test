@@ -1,33 +1,10 @@
+a = 'http://imgoss.cnu.cc/2002/25/40a62fc542a93900b3aa6a580c5aa667.jpg?width=1400&height=788&x-oss-process=style/flow280'
+b = 'http://imgoss.cnu.cc/2002/25/40a62fc542a93900b3aa6a580c5aa667.jpg?width=1400&amp;height=788&amp;x-oss-process=style/flow280'
 
-from socket import socket, SOCK_STREAM, AF_INET
-from base64 import b64encode
-from json import dumps
-from threading import Thread
-def main():
+import re
 
-    class FileTransferHandler(Thread):
+pattern = re.compile(r'.*(?=\?width)')
+r = re.match(pattern, a)
 
-        def __init__(self, cclient):
-            super().__init__()
-            self.cclient = cclient
-
-        def run(self):
-            my_dict = {}
-            my_dict['filename'] = 'unsplash.jpg'
-            my_dict['filedata'] = data
-            json_str = dumps(my_dict)
-            self.cclient.send(json_str.encode('utf-8'))
-            self.cclient.close()
-
-    server = socket()
-    server.bind(('127.0.0.1', 5678))
-    server.listen(512)
-    print('服务器启动，开始监听。。。')
-    with open('/Users/yangjinghui/Desktop/未命名文件夹/alex-iNmouRApXYM-unsplash.jpg', 'rb') as f:
-        data = b64encode(f.read()).decode('utf-8')
-    while True:
-        client, addr = server.accept()
-        FileTransferHandler(client).start()
-
-if __name__ == "__main__":
-    main()
+print(r.group())
+print(r)
